@@ -29,10 +29,12 @@ maintainers = [
 [tool.poetry.dependencies]
 black = "23.3.0"
 gitpython = "*"
+biotite = "*"
 fair-esm = { git = "https://github.com/facebookresearch/esm.git", branch = "main" }
 ipython = "*"
 jupyter = "*"
 lightning = "^2.0.2"
+#pyg = "*"  # needs to be installed using `install_extra_deps.sh`
 matplotlib = "*"
 numpy = "^1.23.5"
 pandas = "*"
