@@ -1,0 +1,54 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "stability-oracle"
+version = "0.1.0"
+description = "Predicting Protein Sequence Stability using Inverse Fold."
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/mlforscience/stability-oracle"
+keywords = ["proteins", "biological-sequences", "likelihood", "ml"]
+packages = [
+    { include = "stabilityoracle", from = "src" },
+]
+
+#homepage = "https://???.github.io/???/"
+#documentation = "https://???.github.io/docs/"
+
+authors = [
+    "Moksh Jian <mokshjn00@gmail.com>",
+    "Joseph Viviano <joseph@viviano.ca>",
+]
+
+maintainers = [
+    "Joseph Viviano <joseph@viviano.ca>",
+]
+
+[tool.poetry.dependencies]
+black = "23.3.0"
+gitpython = "*"
+fair-esm = { git = "https://github.com/facebookresearch/esm.git", branch = "main" }
+ipython = "*"
+jupyter = "*"
+lightning = "^2.0.2"
+matplotlib = "*"
+numpy = "^1.23.5"
+pandas = "*"
+pytest = "*"
+pytest-cov = "*"
+python = "^3.10.10"
+scikit-learn = "*"
+seaborn = "*"
+simple-parsing = "*"
+tokenizers = "0.13.3"
+torch = "^2.0.0"
+torchmetrics = "*"
+tqdm = "*"
+transformers = "4.28.1"
+wandb = "*"
+
+
+[tool.poetry.scripts]
+stabilityoracle = "stabilityoracle.main:main"
